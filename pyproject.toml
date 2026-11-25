@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kara_kutu"
+version = "0.1.0"
+description = "Flight recorder for an agent system: audit trail, per-task traces, and experience recalled when a step recurs."
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Sakir Cimen" }]
+keywords = ["ai-agents", "observability", "audit-log", "tracing", "agent-memory", "sqlite", "kutai"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Framework :: AsyncIO",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "dabidabi @ git+https://github.com/msakirc/dabidabi.git",
+    "yazbunu @ git+https://github.com/msakirc/yazbunu.git",
+]
+
+[project.urls]
+Homepage = "https://github.com/msakirc/kara-kutu"
+Repository = "https://github.com/msakirc/kara-kutu"
+Monorepo = "https://github.com/msakirc/kutai/tree/main/packages/kara_kutu"
+
+[tool.setuptools.packages.find]
+where = ["src"]
